@@ -1,0 +1,26 @@
+# ninja log v6
+84	2213	7695351795408164	CMakeFiles/new_project.elf.dir/C_/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/peripherals.c.obj	b294b8e51160b147
+98	4009	7695351795558217	CMakeFiles/new_project.elf.dir/C_/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/pin_mux.c.obj	5fec60c5de8079dd
+129	2764	7695353045079324	CMakeFiles/new_project.elf.dir/C_/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/board.c.obj	ca4e6dda2bd3930
+144	2847	7695353045239357	CMakeFiles/new_project.elf.dir/C_/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/clock_config.c.obj	bdd19718082e0dd6
+111	1721	7695353357284588	CMakeFiles/new_project.elf.dir/51379473afcbb21f9ac084c258db5091/workspace_lpc845/sdks/lpc8845_01_sdk/components/uart/fsl_adapter_miniusart.c.obj	2cc304abd8e440bd
+78	2181	7695353356954573	CMakeFiles/new_project.elf.dir/C_/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/hardware_init.c.obj	6f8d328e161e8f83
+57	963	7695354269842324	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/gcc/startup_LPC845.S.obj	efd20c18a11cb4b0
+73	1100	7695354270002336	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/system_LPC845.c.obj	a88159e1a5ce0ff7
+69	2543	7695355797882929	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_clock.c.obj	8a4ce93dbe7a159e
+133	2682	7695355798522914	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_common.c.obj	84647765bfd73cd3
+111	2677	7695357289021388	CMakeFiles/new_project.elf.dir/51379473afcbb21f9ac084c258db5091/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_common_arm.c.obj	ea91bbbfdbf6bbcd
+192	2740	7695357289831373	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_inputmux.c.obj	5130113ee5069b6f
+72	3212	7695357288631388	CMakeFiles/new_project.elf.dir/C_/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/main.c.obj	4f3cb98942ee9cb9
+2683	6127	7695357314741392	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_gpio.c.obj	4346b52ba2667f3f
+2742	6593	7695357315331387	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_usart.c.obj	9a93288fd6f9db62
+3217	6725	7695357320081375	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_power.c.obj	210b489bbd48d6a1
+6128	10152	7695357349191369	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_reset.c.obj	1672c91e3accb44a
+6725	10680	7695357355161357	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_syscon.c.obj	6102e8ecc7764b83
+6593	10805	7695357353841370	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/drivers/fsl_swm.c.obj	87fe0c47017e149c
+10806	12896	7695357395971376	CMakeFiles/new_project.elf.dir/7fd1c77224803d54901fb0ea1978e605/sdks/lpc8845_01_sdk/devices/LPC845/utilities/debug_console_lite/fsl_assert.c.obj	94e07787c039b2be
+10681	12995	7695357394731389	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/utilities/fsl_sbrk.c.obj	3087407341e9e24b
+10152	14372	7695357389431397	CMakeFiles/new_project.elf.dir/51379473afcbb21f9ac084c258db5091/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/utilities/fsl_syscall_stub.c.obj	7d058d6b43eacddd
+12900	16995	7695357416911411	CMakeFiles/new_project.elf.dir/7fd1c77224803d54901fb0ea1978e605/sdks/lpc8845_01_sdk/devices/LPC845/utilities/debug_console_lite/fsl_debug_console.c.obj	3b7e79869d3c9b8
+12996	18336	7695357417871380	CMakeFiles/new_project.elf.dir/17f62c31b1ff391f615546bae7210b75/curso-lse/workspace_lpc845/sdks/lpc8845_01_sdk/devices/LPC845/utilities/str/fsl_str.c.obj	ef85d883288db753
+18336	21696	7695357471273948	new_project.elf	f5cdaf605c1a9f51

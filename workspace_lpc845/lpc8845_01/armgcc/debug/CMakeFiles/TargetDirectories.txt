@@ -1,0 +1,3 @@
+C:/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/armgcc/debug/CMakeFiles/new_project.elf.dir
+C:/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/armgcc/debug/CMakeFiles/edit_cache.dir
+C:/Users/azori/OneDrive/Documentos/Taskflow/curso-lse/workspace_lpc845/lpc8845_01/armgcc/debug/CMakeFiles/rebuild_cache.dir
