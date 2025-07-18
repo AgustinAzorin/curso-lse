@@ -1,6 +1,3 @@
-// ============================================================================
-// INCLUDES
-// ============================================================================
 
 #include "board.h"
 #include "FreeRTOS.h"
@@ -8,42 +5,23 @@
 
 #include "app_tasks.h"
 
-// ============================================================================
-// PROGRAMA PRINCIPAL
-// ============================================================================
-
-/**
- * @brief Programa principal del sistema de control de luminosidad
- *        Inicializa el hardware, crea todas las tareas del sistema y
- *        inicia el scheduler de FreeRTOS
- */
 int main(void)
 {
-	// ========================================================================
-	// INICIALIZACIÓN DEL HARDWARE
-	// ========================================================================
-
+	
 	// Configurar clock del sistema a 30 MHz
 	BOARD_BootClockFRO30M();
 
 	// Inicializar consola de debug para printf
 	BOARD_InitDebugConsole();
 
-	// ========================================================================
-	// CREACIÓN DE TAREAS DEL SISTEMA
-	// ========================================================================
 
-	// Tarea de inicialización del sistema (prioridad más alta)
+	// Tarea de inicialización del sistema
 	xTaskCreate(task_system_init,
 				"System Init",
 				tskSYSTEM_INIT_STACK,
 				NULL,
 				tskSYSTEM_INIT_PRIORITY,
 				NULL);
-
-	// ------------------------------------------------------------------------
-	// Tareas de adquisición de datos
-	// ------------------------------------------------------------------------
 
 	// Tarea para trigger del ADC
 	xTaskCreate(task_adc_trigger,
@@ -61,9 +39,7 @@ int main(void)
 				tskLIGHT_SENSOR_PRIORITY,
 				NULL);
 
-	// ------------------------------------------------------------------------
-	// Tareas de control y actuadores
-	// ------------------------------------------------------------------------
+	
 
 	// Tarea de control PWM
 	xTaskCreate(task_pwm_control,
@@ -81,9 +57,6 @@ int main(void)
 				tskRGB_CONTROLLER_PRIORITY,
 				NULL);
 
-	// ------------------------------------------------------------------------
-	// Tareas de interfaz de usuario
-	// ------------------------------------------------------------------------
 
 	// Tarea de manejo del display
 	xTaskCreate(task_display_manager,
@@ -101,9 +74,6 @@ int main(void)
 				tskDISPLAY_TOGGLE_PRIORITY,
 				NULL);
 
-	// ------------------------------------------------------------------------
-	// Tareas de entrada (botones y sensores)
-	// ------------------------------------------------------------------------
 
 	// Tarea del botón de usuario
 	xTaskCreate(task_user_button,
@@ -128,10 +98,6 @@ int main(void)
 				NULL,
 				tskSETPOINT_BUTTONS_PRIORITY,
 				NULL);
-
-	// ------------------------------------------------------------------------
-	// Tareas de monitoreo y debug
-	// ------------------------------------------------------------------------
 
 	// Tarea de monitoreo del sistema
 	xTaskCreate(task_system_monitor,
