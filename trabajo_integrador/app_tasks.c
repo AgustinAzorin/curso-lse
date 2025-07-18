@@ -1,15 +1,11 @@
 #include "app_tasks.h"
 
-// ============================================================================
-// VARIABLES GLOBALES
-// ============================================================================
-
 // Colas para comunicación entre tareas
 xQueueHandle queue_adc;				// Cola para datos del ADC
 xQueueHandle queue_lux;				// Cola para datos de luminosidad
 xQueueHandle queue_display;			// Cola para datos del display
-xQueueHandle queue_display_control; // Cola para control del display
-xQueueHandle queue_setpoint;		// Cola para el valor de setpoint
+xQueueHandle queue_display_control; 		// Cola para control del display
+xQueueHandle queue_setpoint;			// Cola para el valor de setpoint
 
 // Semáforos para sincronización
 xSemaphoreHandle semphr_buzz;	 // Semáforo para interrupción del infrarojo
@@ -19,14 +15,6 @@ xSemaphoreHandle semphr_usr;	 // Semáforo para botón de usuario
 // Manejadores de tareas
 TaskHandle_t handle_display; // Handler para la tarea de display
 
-// ============================================================================
-// TAREAS DE INICIALIZACIÓN
-// ============================================================================
-
-/**
- * @brief Inicializa todos los periféricos, colas y semáforos del sistema
- * @param params Parámetros de la tarea (no utilizados)
- */
 void task_system_init(void *params)
 {
 	// Inicialización de semáforos
@@ -62,14 +50,7 @@ void task_system_init(void *params)
 	vTaskDelete(NULL);
 }
 
-// ============================================================================
-// TAREAS DE ADQUISICIÓN DE DATOS
-// ============================================================================
 
-/**
- * @brief Activa conversiones del ADC cada 250ms
- * @param params Parámetros de la tarea (no utilizados)
- */
 void task_adc_trigger(void *params)
 {
 	while (1)
@@ -81,10 +62,7 @@ void task_adc_trigger(void *params)
 	}
 }
 
-/**
- * @brief Lee periódicamente el valor de intensidad lumínica del sensor BH1750
- * @param params Parámetros de la tarea (no utilizados)
- */
+
 void task_light_sensor(void *params)
 {
 	uint16_t lux = 0;
@@ -105,14 +83,6 @@ void task_light_sensor(void *params)
 	}
 }
 
-// ============================================================================
-// TAREAS DE CONTROL Y ACTUADORES
-// ============================================================================
-
-/**
- * @brief Controla el PWM del LED principal basado en el potenciómetro
- * @param params Parámetros de la tarea (no utilizados)
- */
 void task_pwm_control(void *params)
 {
 	adc_data_t data = {0};
@@ -135,10 +105,7 @@ void task_pwm_control(void *params)
 	}
 }
 
-/**
- * @brief Controla el LED RGB basado en el error entre setpoint y valor actual
- * @param params Parámetros de la tarea (no utilizados)
- */
+
 void task_rgb_controller(void *params)
 {
 	uint16_t lux_actual;
@@ -171,14 +138,7 @@ void task_rgb_controller(void *params)
 	}
 }
 
-// ============================================================================
-// TAREAS DE INTERFAZ DE USUARIO
-// ============================================================================
 
-/**
- * @brief Maneja la visualización multiplexada en el display de 7 segmentos
- * @param params Parámetros de la tarea (no utilizados)
- */
 void task_display_manager(void *params)
 {
 	uint16_t data;
@@ -212,10 +172,7 @@ void task_display_manager(void *params)
 	}
 }
 
-/**
- * @brief Alterna entre mostrar setpoint y valor de luz en el display
- * @param params Parámetros de la tarea (no utilizados)
- */
+
 void task_display_toggle(void *params)
 {
 	bool current_mode = false;
@@ -236,14 +193,7 @@ void task_display_toggle(void *params)
 	}
 }
 
-// ============================================================================
-// TAREAS DE ENTRADA (BOTONES Y SENSORES)
-// ============================================================================
 
-/**
- * @brief Detecta pulsaciones del botón de usuario con debounce
- * @param params Parámetros de la tarea (no utilizados)
- */
 void task_user_button(void *params)
 {
 	while (1)
@@ -268,10 +218,7 @@ void task_user_button(void *params)
 	}
 }
 
-/**
- * @brief Controla el buzzer basado en el sensor infrarrojo CNY70
- * @param params Parámetros de la tarea (no utilizados)
- */
+
 void task_buzzer_control(void *params)
 {
 	while (1)
@@ -299,10 +246,7 @@ void task_buzzer_control(void *params)
 	}
 }
 
-/**
- * @brief Maneja los botones S1 y S2 para control del setpoint
- * @param params Parámetros de la tarea (no utilizados)
- */
+
 void task_setpoint_buttons(void *params)
 {
 	while (1)
@@ -326,14 +270,7 @@ void task_setpoint_buttons(void *params)
 	}
 }
 
-// ============================================================================
-// TAREAS DE MONITOREO Y DEBUG
-// ============================================================================
 
-/**
- * @brief Imprime información de estado del sistema por consola
- * @param params Parámetros de la tarea (no utilizados)
- */
 void task_system_monitor(void *params)
 {
 	uint8_t porcentaje_luz = 0;
